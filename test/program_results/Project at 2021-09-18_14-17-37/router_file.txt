@@ -1,0 +1,22 @@
+enable
+configure terminal
+interface fa0/0
+no shut
+exit
+interface fa0/0.1
+encapsulation dot1Q 10
+ip address 192.168.1.126 255.255.255.128
+exit
+interface fa0/0
+no shut
+exit
+interface fa0/0.2
+encapsulation dot1Q 20
+ip address 192.168.1.254 255.255.255.128
+exit
+interface fa0/1
+no shut
+interface fa0/1.1
+encapsulation dot1Q 10
+ip address 192.168.2.254 255.255.255.0
+exit
